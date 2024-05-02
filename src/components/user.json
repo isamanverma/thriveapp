@@ -1,0 +1,40 @@
+
+{
+  "user_info": {
+    "name": "John Doe",
+    "username": "johndoe123" 
+  },
+  "profile_picture": "profile_picture.jpg", 
+  "health_goals": {
+    "weight_management": "lose_weight", 
+    "activity_level": {
+      "target_steps": 10000,
+      "exercise_frequency": "3_times_a_week"
+    },
+    "dietary_preferences": ["vegetarian"] 
+  },
+  "health_data": {
+    "weight": 80.5, 
+    "height": 178,
+    "date_of_birth": "1990-01-01" 
+  },
+  "progress_tracking": {
+    "weight_history": [
+     
+      { "date": "2024-04-15", "weight": 81.0 },
+      { "date": "2024-04-20", "weight": 80.5 }
+    ],
+    "steps_history": [], 
+    "milestones": [] 
+  },
+  "settings": {
+    "privacy": {
+      "pro˳file_visibility": "friends_only",
+      "data_sharing": "app_only"
+    },
+    "notifications": {
+      "reminder_enabled": true,
+      "news_enabled": false
+    }
+  }
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "year": 2023,
+    "months": [
+      {
+        "month": 10,
+        "weeks": [
+          {
+            "week": 1,
+            "weight": 85
+          },
+          {
+            "week": 2,
+            "weight": 84.5
+          },
+          {
+            "week": 3,
+            "weight": 84
+          },
+          {
+            "week": 4,
+            "weight": 83
+          }
+        ]
+      },
+      {
+        "month": 11,
+        "weeks": [
+          {
+            "week": 1,
+            "weight": 83.1
+          },
+          {
+            "week": 2,
+            "weight": 81.9
+          },
+          {
+            "week": 3,
+            "weight": 81
+          },
+          {
+            "week": 4,
+            "weight": 80.2
+          }
+        ]
+      },
+      {
+        "month": 12,
+        "weeks": [
+          {
+            "week": 1,
+            "weight": 80
+          },
+          {
+            "week": 2,
+            "weight": 79.5
+          },
+          {
+            "week": 3,
+            "weight": 79.8
+          },
+          {
+            "week": 4,
+            "weight": 78.4
+          },
+          {
+            "week": 5,
+            "weight": 77.2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "months": [
+      {
+        "month": 1,
+        "weeks": [
+          {
+            "week": 1,
+            "weight": 76.9
+          },
+          {
+            "week": 2,
+            "weight": 76.3
+          },
+          {
+            "week": 3,
+            "weight": 76.4
+          },
+          {
+            "week": 4,
+            "weight": 75
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "weeks": [
+          {
+            "week": 1,
+            "weight": 75
+          },
+          {
+            "week": 2,
+            "weight": 74.8
+          },
+          {
+            "week": 3,
+            "weight": 74.4
+          },
+          {
+            "week": 4,
+            "weight": 74
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "weeks": [
+          {
+            "week": 1,
+            "weight": 74
+          },
+          {
+            "week": 2,
+            "weight": 73.8
+          },
+          {
+            "week": 3,
+            "weight": 73.3
+          },
+          {
+            "week": 4,
+            "weight": 73
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "weeks": [
+          {
+            "week": 1,
+            "weight": 73
+          },
+          {
+            "week": 2,
+            "weight": 73.2
+          },
+          {
+            "week": 3,
+            "weight": 72.8
+          },
+          {
+            "week": 4,
+            "weight": 71.7
+          }
+        ]
+      }
+    ]
+  }
+]

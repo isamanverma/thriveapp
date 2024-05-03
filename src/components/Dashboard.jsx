@@ -3,6 +3,8 @@ import { RiLogoutBoxRFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../helper/supabaseClient";
 import ProgressChart from "./UI/ProgressChart"; // Ensure that ProgressChart is imported
+import MealRecommendations from "./DashBoardMeals";
+import ExerciseRecommendations from "./DashBoardExercise";
 
 export default function Dashboard() {
   const [user, setUser] = useState({});
@@ -27,7 +29,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="h-screen">
+    <div className="">
       {Object.keys(user).length !== 0 ? (
         <>
           <div className="flex flex-row-reverse justify-between">
@@ -46,6 +48,12 @@ export default function Dashboard() {
             dolorem iusto rem ducimus incidunt vel!
           </p>
           <ProgressChart /> {/* Ensure this component is rendered */}
+          <div className="pt-10">
+            <MealRecommendations />
+          </div>
+          <div className="pt-10">
+            <ExerciseRecommendations />
+          </div>
         </>
       ) : (
         <h1>User not logged in</h1>

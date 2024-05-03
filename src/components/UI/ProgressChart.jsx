@@ -64,7 +64,9 @@ export default function ProgressChart() {
   }, []);
 
   return options ? (
-    <HighchartsReact highcharts={Highcharts} options={options} />
+    <div>
+      <HighchartsReact highcharts={Highcharts} options={options} />
+    </div>
   ) : (
     <div>Loading...</div>
   );

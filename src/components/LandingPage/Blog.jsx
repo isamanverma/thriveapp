@@ -1,29 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Blog() {
-  return (
-    <article className="lg:max-w-80 group">
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-        className="size-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-      />
+const BlogCard = ({ title, excerpt, imageUrl }) => (
+  <div className="mb-8 overflow-hidden rounded-lg bg-white shadow-md">
+    <img src={imageUrl} alt={title} className="h-48 w-full object-cover" />
+    <div className="p-4">
+      <h2 className="mb-2 text-xl font-bold">{title}</h2>
+      <p className="mb-4 text-gray-700">{excerpt}</p>
+      <Link
+        to="#"
+        className="inline-flex items-center rounded-lg bg-green-100 px-3 py-2 text-center text-sm font-medium text-green-500 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+      >
+        Read More
+        <svg
+          className="ml-2 h-4 w-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 12h14M12 5l7 7-7 7"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
+      </Link>
+    </div>
+  </div>
+);
 
-      <div className="p-4">
-        <a href="#">
-          <h3 className="text-lg font-medium text-gray-900">
-            Finding the Journey to Mordor
-          </h3>
-        </a>
-
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-          dolores, possimus pariatur animi temporibus nesciunt praesentium
-          dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
-          soluta, voluptates neque explicabo tempora nisi culpa eius atque
-          dignissimos. Molestias explicabo corporis voluptatem?
-        </p>
-      </div>
-    </article>
-  );
-}
+export default BlogCard;

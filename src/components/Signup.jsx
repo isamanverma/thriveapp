@@ -17,15 +17,17 @@ function Signup() {
   });
 
   return (
-    <div className="grid h-screen w-screen place-items-center">
-      <div className="w-1/2 rounded border-2 p-4 md:w-1/3">
-        <Auth
-          supabaseClient={supabase}
-          appearance={{ theme: ThemeSupa }}
-          providers={["google"]}
-        />
+    <>
+      <div className="grid h-screen w-screen place-items-center">
+        <div className="w-1/2 rounded border-2 p-4 md:w-1/3">
+          <Auth
+            supabaseClient={supabase}
+            appearance={{ theme: ThemeSupa }}
+            providers={["google"]}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

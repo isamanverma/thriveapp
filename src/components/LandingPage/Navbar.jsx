@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <div>
-      <nav className="w-full border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-900">
+      <nav className="dark:bg-lightGray w-full bg-white shadow-md">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
           <Link
             to="/"
@@ -14,7 +19,7 @@ export default function Navbar() {
               className="h-8"
               alt="Flowbite Logo"
             />
-            <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
+            <span className="self-center whitespace-nowrap text-2xl font-semibold text-green-500 dark:text-black">
               Thrive
             </span>
           </Link>
@@ -22,7 +27,7 @@ export default function Navbar() {
             <Link to="signup">
               <button
                 type="button"
-                className="rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:scale-105 hover:bg-blue-800 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="rounded-lg bg-green-500 px-4 py-2 text-center text-sm font-medium text-white hover:scale-105 hover:bg-green-700 focus:outline-none dark:bg-green-600 dark:hover:bg-green-800 dark:focus:ring-green-500"
               >
                 Log in
               </button>
@@ -33,7 +38,8 @@ export default function Navbar() {
               type="button"
               className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky"
-              aria-expanded="false"
+              aria-expanded={isOpen}
+              onClick={toggleMenu}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -48,45 +54,41 @@ export default function Navbar() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M1 1h15M1 7h15M1 13h15"
+                  d={isOpen ? "M3 6h10M3 12h10" : "M1 1h15M1 7h15M1 13h15"}
                 />
               </svg>
             </button>
           </div>
           <div
-            className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+            className={`w-full md:flex md:w-auto ${
+              isOpen ? "block" : "hidden"
+            }`} // Toggle visibility based on isOpen state
             id="navbar-sticky"
           >
-            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900">
+            <ul className="mt-4 flex flex-col rounded-lg text-black md:mt-0 md:flex-row md:space-x-8">
               <li>
                 <Link
-                  href="#"
-                  className="block rounded bg-blue-700 px-3 py-2 text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500"
+                  to="/"
+                  className="block px-3 py-2  md:bg-transparent md:p-0 md:hover:text-green-700 "
                   aria-current="page"
                 >
                   Home
                 </Link>
               </li>
+              
               <li>
                 <Link
-                  href="#"
-                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+                  to="/about"
+                  className="block px-3 py-2 text-gray-700  md:p-0 md:hover:text-green-700 "
                 >
                   About
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href="#"
-                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+                  to="/contact"
+                  className="block px-3 py-2 text-gray-700 md:p-0 md:hover:text-green-700 "
                 >
                   Contact
                 </Link>

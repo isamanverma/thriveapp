@@ -1,13 +1,19 @@
 import React from "react";
-import Blog from "./Blog";
+import BlogCard from "./Blog"; // Assuming blogs.jsx is in the same directory
 
-export default function Blogpage() {
+const Blogs = ({ blogs }) => {
   return (
-    <div className=" mx-auto  grid max-w-[80%] grid-cols-1 md:grid-cols-3 gap-8 lg:grid-cols-4">
-      <Blog />
-      <Blog />
-      <Blog />
-      <Blog />
-    </div>
+    <section className="container mx-auto px-4 py-20">
+      <h2 className="mb-12 text-center text-3xl font-bold">
+        Our Latest Blog Posts
+      </h2>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {blogs.map((blog) => (
+          <BlogCard key={blog.id} {...blog} />
+        ))}
+      </div>
+    </section>
   );
-}
+};
+
+export default Blogs;

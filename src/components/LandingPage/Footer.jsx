@@ -1,73 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function () {
+const Footer = () => {
   return (
-    <footer className="mx-auto max-w-[80%]">
-      <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="lg:flex lg:items-end lg:justify-between">
+    <footer className="bg-gray-900 py-8 text-white">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-between">
           <div>
-            <div className="flex items-center justify-center gap-4 lg:justify-start">
-              <img
-                className="size-16"
-                src="/src/assets/Images/logo.png"
-                alt="logo"
-              />
-              <span className="text-2xl">Thrive</span>
-            </div>
-
-            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-              consequuntur amet culpa cum itaque neque.
+            <h2 className="text-xl font-bold">Thrive</h2>
+            <p className="mt-2 text-sm text-gray-400">
+              Empowering you to live your best life.
             </p>
           </div>
-
-          <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                About
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Services
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Projects
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Blog
-              </a>
-            </li>
-          </ul>
+          <div>
+            <ul className="flex space-x-4">
+              <li>
+                <Link to="/about" className="hover:text-gray-400">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-gray-400">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <p className="mt-12 text-center text-sm text-gray-500 lg:text-right">
-          Copyright &copy; 2022. All rights reserved.
+        <hr className="my-4 border-gray-700" />
+        <p className="text-center text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} Thrive. All rights reserved.
         </p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

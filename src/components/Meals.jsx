@@ -46,8 +46,6 @@ Sweet Potato Salad,0,1,1,1,90,4.3,0.9,0.7,5,0,8,9.7,1.6,0.0,0.0,Healthy
 Vermicelli Upma,0,1,1,1,107,5.8,1.3,0.0,10,0,111,0.0,0.0,0.0,0.0,Normal
 Grilled Chicken,0,1,1,0,335,19.0,33.0,2.5,25,389,553,1.4,0.0,0.0,0.0,Overweight
 Angoori Rasmalai,0,0,1,1,250,7.0,6.0,0.5,100,40,70,30.0,0.0,0.0,30.0,Healthy
-
-
 `;
 
     // Parse CSV data

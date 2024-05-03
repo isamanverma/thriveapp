@@ -10,6 +10,8 @@ import Resources from "./components/Resources";
 import Sidebar from "./components/Sidebar";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
               <Route path="" element={<LandingPage />} />
               <Route exact path="signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           }
         />

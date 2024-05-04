@@ -66,7 +66,7 @@ function Contact() {
         </div>
         <div className="flex w-full items-center justify-center md:w-1/2">
           <img
-            src="/public/Images/ContactUs.svg"
+            src="/Images/ContactUs.svg"
             alt="Contact Us Illustration"
             className="h-auto w-full object-cover"
           />

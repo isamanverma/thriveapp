@@ -9,7 +9,7 @@ function About() {
       <div className="container mx-auto flex flex-col items-center justify-between gap-12 px-8 py-20 md:px-0 lg:flex-row">
         <div className="mt-12 w-full lg:mt-0 lg:w-1/2">
           <img
-            src="/public/Images/team.jpg"
+            src="/Images/team.jpg"
             alt="Thrive team working on innovative solutions"
             className="h-auto w-full rounded-lg object-cover shadow-lg"
           />

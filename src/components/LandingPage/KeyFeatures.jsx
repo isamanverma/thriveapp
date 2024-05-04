@@ -10,7 +10,7 @@ const KeyFeatures = () => {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="feature-card overflow-hidden rounded-lg shadow-md">
             <img
-              src="/public/Images/Mealplanning.jpg"
+              src="/Images/Mealplanning.jpg"
               alt="Meal plan"
               className="h-48 w-full object-cover"
             />
@@ -27,7 +27,7 @@ const KeyFeatures = () => {
           </div>
           <div className="feature-card overflow-hidden rounded-lg shadow-md">
             <img
-              src="/public/Images/grocerylist.jpg"
+              src="/Images/grocerylist.jpg"
               alt="Grocery list"
               className="h-48 w-full object-top object-cover"
             />
@@ -42,7 +42,7 @@ const KeyFeatures = () => {
           </div>
           <div className="feature-card overflow-hidden rounded-lg shadow-md md:mt-10">
             <img
-              src="/public/Images/workout.jpg"
+              src="/Images/workout.jpg"
               alt="Workout"
               className="h-48 w-full object-cover"
             />
@@ -57,7 +57,7 @@ const KeyFeatures = () => {
           </div>
           <div className="feature-card overflow-hidden rounded-lg shadow-md md:mt-10">
             <img
-              src="public/Images/progresstracking.jpg"
+              src="/Images/progresstracking.jpg"
               alt="Progress tracking"
               className="h-48 object-top w-full object-cover"
             />
